@@ -6,3 +6,28 @@
     Last updated: 2025-03-15
     Status: Draft
 */
+/* Overarching section styles  */
+.content-section-quadra {
+    padding-block: var(--section-padding-lg);
+}
+.content-section-quadra > .container__narrow {
+    
+  display: grid;
+  gap: var(--gap-lg);
+}
+
+.content-section-quadra__title, .content-section-quadra__lead {
+  max-width: 44ch;
+  margin: auto;
+  text-align: center;
+}
+.content-section-quadra__lead {
+  margin: auto;
+}
+
+/* Call to action styles */
+.content-section-quadra__actions {
+  display: flex;
+  gap: var(--gap-sm);
+  place-self: center;
+}

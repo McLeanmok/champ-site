@@ -1,44 +1,50 @@
 /* 
     Home page styles
+    Styling control for the home page will live here
     Patterns that are used to control the home page Won'will be documented here
-    Last updated: 2025-03-15
-    Status: Draft
+
+    Last updated: 2025-03-16
+    Status: beta
 */
 
 /* Hero section  url(../patterns/hero-victoria.css)*/
 
 /* About */
 .about-home {
-    background-color: var(--seccondary-100);
-    color: var(--white);
+  background-color: var(--seccondary-100);
+  color: var(--white);
 }
 
 .about-home > .container {
-    display: grid;
-    gap: var(--gap-xl);
+  display: grid;
+  gap: var(--gap-xl);
 }
 
 .about-home__text {
-    display: grid;
-    gap: var(--gap-md);
-    text-align: center;
+  display: grid;
+  gap: var(--gap-md);
+  text-align: center;
 }
-.about-home__lead{
-    margin: auto;
+.about-home__lead {
+  margin: auto;
 }
 
 .about-home__grid {
-    display: grid;
-    grid-template-columns: var(--grid-2);
-    gap: var(--gap-md);
-    align-items: center;
+  display: grid;
+  grid-template-columns: var(--grid-2);
+  gap: var(--gap-md);
+  align-items: center;
 }
 
 .about-home-grid__content {
-    display: grid;
-    gap: var(--gap-md);
+  display: grid;
+  gap: var(--gap-md);
 }
 
-.about-home >.container >.standard-btn {
-    place-self: center;
+.about-home > .container > .standard-btn {
+  place-self: center;
 }
+
+/* Features - Content Section Texada -../patterns/content-texada.css */
+/* Benefits - Content Section Hornby - ../patterns/content-hornby.css */
+/* CTA - Content Section Quadra - ../patterns/content-quadra.css */

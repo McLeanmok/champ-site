@@ -32,7 +32,9 @@
 
 .standard-btn:hover, .standard-btn:focus {
   background-color: var(--site-hover-color);
+  border-radius: var(--radius-lg);
 }
+
 
 .standard-btn[data-btn-theme="light"] {
   background-color: var(--white);
@@ -43,6 +45,15 @@
   color: var(--black);
 } 
 
+.standard-btn[data-btn-theme="outline"] {
+  background-color: transparent;
+  border: 3px solid var(--site-color);
+  color: var(--black);
+}
+
+.standard-btn[data-btn-theme="outline"]:hover, .standard-btn[data-btn-theme="outline"]:focus {
+  background-color: hsl(from var(--primary-hsl) h s l / .2);
+}
 /* Cards */
 .primary-card {
   background-color: var(--surface-900);

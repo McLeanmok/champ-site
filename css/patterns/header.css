@@ -1,8 +1,25 @@
 /* 
     header.css is imported in the index.css file.
     control the header of the site
-    status - draft - need to build the mobile version -- q for Robin 
-    Last updated: 2025-03-15
+    status - alpha 
+    Last updated: 2025-03-16
+
+    Notes:
+    - unsure about how to handle the mobile version of the header -- need to discuss with Robin
+    - I need to add a hamburger menu for the mobile version
+    - some sort of pop over would be ideal - little to no JS
+    - 768px is the breakpoint for the mobile version
+      - at this point, the header will be hidden
+      - the hamburger menu will be displayed
+      - user should be able to toggle the menu
+      - the menu should be a pop-over
+      - Animation would be nice?? - probably not necessary, but it would be nice
+    - I need to add a hover effect to the links
+    - I need to style the CTA in a different fashion, so it's appropriate for that schreen size
+    - Acessability is important
+    - slim code is important
+
+    - for the future when I'm converting this website to astro, I shall first out how to toggle the aria-current attribute with JS
 */
 /* Overarching header styles  */
 .site-header {

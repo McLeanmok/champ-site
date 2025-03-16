@@ -1,8 +1,8 @@
 /* 
     This file controls the styles of Content Section Texada.
 
-    Last updated: 2025-03-15
-    Status: Draft
+    Last updated: 2025-03-16
+    Status: beta
 
     Content Section Texada Has space for three talking points, which are displayed in a 2 column grid. Each talking point has heading, text on the left, and a figure tag on the right. The talking points automatically rotate so that every even one, the figure is on the left, and the text is on the right.
 */

@@ -1,0 +1,60 @@
+/* 
+    This file contains the styles for the global footer template of the website.
+
+    The footer is a global component that is displayed at the bottom of the page. It contains links to the main pages of the website, as well as links to other key links related to the product itself.
+
+    list of classes:
+    .site-footer
+    .container
+    .site-footer__content
+    .site-footer__brand
+    .site-footer__link-group
+    .site-footer__siteLinks and .site-footer__productLinks
+    .site-footer__link
+
+    Status: beta
+    last modified: 2025-03-16
+*/
+
+/* Overarching footer styles */
+.site-footer {
+  padding: var(--section-padding-lg);
+  background-color: var(--surface-100);
+  color: var(--white);
+
+  a {
+    color: var(--white);
+  }
+}
+
+.site-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Link group styles */
+.site-footer__link-group {
+  display: grid;
+  gap: calc(var(--gap-sm) * 1.5);
+}
+.site-footer__link-group-title {
+  font-size: var(--fs-h4);
+}
+.site-footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin: 0;
+  padding: 0;
+}
+.site-footer__link {
+  transition: 0.3s ease-in-out;
+}
+.site-footer__link:hover {
+  color: var(--primary-400);
+}
+.site-footer__link a[aria-current="page"] {
+  font-weight: var(--fw-600);
+}
