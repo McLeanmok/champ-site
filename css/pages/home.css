@@ -1,0 +1,44 @@
+/* 
+    Home page styles
+    Patterns that are used to control the home page Won'will be documented here
+    Last updated: 2025-03-15
+    Status: Draft
+*/
+
+/* Hero section  url(../patterns/hero-victoria.css)*/
+
+/* About */
+.about-home {
+    background-color: var(--seccondary-100);
+    color: var(--white);
+}
+
+.about-home > .container {
+    display: grid;
+    gap: var(--gap-xl);
+}
+
+.about-home__text {
+    display: grid;
+    gap: var(--gap-md);
+    text-align: center;
+}
+.about-home__lead{
+    margin: auto;
+}
+
+.about-home__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2);
+    gap: var(--gap-md);
+    align-items: center;
+}
+
+.about-home-grid__content {
+    display: grid;
+    gap: var(--gap-md);
+}
+
+.about-home >.container >.standard-btn {
+    place-self: center;
+}

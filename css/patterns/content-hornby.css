@@ -1,0 +1,43 @@
+/* 
+    This file contains the styles for the content-hornby pattern.
+
+    Content Hornby is a pattern that is used to display a list of items in a grid format. Traditionally, you won't use 6 cards, but you can use as many as you want. The pattern is responsive and will adjust the number of rows based on the screen size.
+
+    The pattern is used in the following pages:
+        Home
+        features 
+        Download
+
+    Status: draft
+    
+*/
+
+/* Overarching section styles  */
+.content-section-hornby {
+    background-color: var(--tertiary-900);
+}
+.content-section-hornby >.container {
+    display: grid;
+    gap: var(--gap-md);
+    
+}
+.content-section-hornby__text {
+    display: grid;
+    gap: var(--gap-md);
+    text-align: center;
+    p {margin: auto;}
+}
+
+/* Card grid */
+.content-section-hornby__grid {
+    display: grid;
+    grid-template-columns: var(--grid-3);
+    gap: var(--grid-gap);
+}
+
+/* Mobile content  */
+@media (max-width: 768px) {
+    .content-section-hornby__text {
+        text-align: left;
+    }
+}

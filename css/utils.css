@@ -58,9 +58,9 @@
   --tertiary-800: hsl(var(--tertiary-hue) var(--tertiary-saturation) 80%);
   --tertiary-900: hsl(var(--tertiary-hue) var(--tertiary-saturation) 90%);
 
-   /* Surface */
+   /* face */
    --surface-hue: 221;
-   --surface-saturation: 114;
+   --surface-saturation: 14;
    --surface-lightness: 56;
    --surface-hsl: hsl(var(--surface-hue) var(--surface-saturation) var(--surface-lightness));
  
@@ -189,7 +189,7 @@
   --fs-p: clamp(1rem, 0.299vw + 0.904rem, 1.3125rem);
 
   /* Linre heights */
-  --lh-p: clamp(1rem, 0.956vw + 0.694rem, 2rem);
+  --lh-p: clamp(1.3rem, 0.956vw + 0.694rem, 2rem);
   --lh-headinsgs: clamp(2rem, 1.912vw + 1.388rem, 4rem);
   
   /* Fonts */
@@ -247,7 +247,7 @@
   /* Contextual Padding */
   --button-padding: var(--sp-100) var(--sp-150);
   /* Grid templates */
-  --grid-2: repeat(auto-fit, minmax(500px, 2fr));
+  --grid-2: repeat(auto-fit, minmax(min(500px, 100%), 2fr));
   --grid-3: repeat(auto-fit, minmax(333px, 3fr));
   --grid-4: repeat(auto-fit, minmax(250px, 4fr));
   --grid-5: repeat(auto-fit, minmax(200px, 5fr));

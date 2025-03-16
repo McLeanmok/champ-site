@@ -1,0 +1,62 @@
+/* 
+    This document contains styles for atomic level components. These are the smallest building blocks of a design system. They are the most basic elements that can be combined to create more complex components. This document contains styles for the following components:
+        Buttons
+        Forms
+        Cards
+        
+        Atomic level components may be used within other sections, and even larger components of the website. PLESE NOTE: the components in the document are architected with the Block Element Modifier syntax (BEM) this is so that styles stay orginized, and are easy to update. 
+
+        Example:
+        .MyComponent {}
+        .MyComponent__element {}
+        .MyComponent--modifier {}
+        Note that variants use custom HTML custom attributes to apply styles. Reason being - it doesn't involve any code duplication, and it keeps the stylesheet cleaer
+        Example:
+        <a class="standard-btn" data-theme="dark">Click me baby one more time</a>
+        <a class="standard-btn" data-theme="light">Click me baby one more time</a>
+
+    Status: In Progress
+*/
+
+/* Buttons */
+.standard-btn {
+  background-color: var(--site-color);
+  color: var(--white);
+  padding: var(--button-padding);
+
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.standard-btn:hover, .standard-btn:focus {
+  background-color: var(--site-hover-color);
+}
+
+.standard-btn[data-btn-theme="light"] {
+  background-color: var(--white);
+  color: var(--site-color);
+}
+.standard-btn[data-btn-theme="light"]:hover, .standard-btn[data-btn-theme="light"]:focus {
+  background-color: var(--primary-900);
+  color: var(--black);
+} 
+
+/* Cards */
+.primary-card {
+  background-color: var(--surface-900);
+  padding: var(--sp-150) var(--sp-200);
+  display: grid;
+  gap: calc(var(--card-gap) / 2);
+  border-radius: var(--radius-md);
+}
+
+.primary-card__title {
+  font-size: var(--fs-h3);  
+}
+
+.primary-card__body {
+  font-size: var(--fs-p);
+  margin: auto 0;
+}

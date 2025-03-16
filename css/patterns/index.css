@@ -1,1 +1,10 @@
+/* 
+    this directory contains styles for any overarching patterns that repeats across multiple pages of the site
+    for example, the header, footer, and hero sections
+    this file is the entry point for all of these patterns, and should import all of the other files in this directory to the top level index.css file    
+*/
 @import url(header.css);
+@import url(hero-victoria.css);
+@import url(content-texada.css);
+@import url(content-hornby.css);
+@import url(content-quadra.css);

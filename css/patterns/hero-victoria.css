@@ -1,0 +1,30 @@
+/* 
+    This file is used to style the hero section of the Victoria pattern.
+    Imported into the index.css file for the patterns directory 
+    Status: public 
+    Last updated: 2025-03-16
+
+    This pattern contains two equal columns. The left column contains text content, and the right column contains an image. Hero Section Victoria should be used on the index, and features pages of the site.
+
+*/
+
+/* Overarching hero section styles  */
+.hero-victoria {
+  padding-block: var(--section-padding-xl);
+}
+
+.hero-victoria__grid {
+  display: grid;
+  gap: var(--grid-gap);
+    grid-template-columns: var(--grid-2);
+}
+/* Left text styles  */
+.hero-victoria__content {
+    display: grid;
+    border: 5px solid var(--color-primary);
+    gap: calc(var(--grid-gap) / 2);
+}
+
+.hero-victoria__content > * {
+  place-self: flex-start;
+}

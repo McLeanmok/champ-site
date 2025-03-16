@@ -100,7 +100,11 @@ section {
 a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: var(--black);
+}
+
+a:focus, a:focus-within {
+  border: 5px solid var(--info-400)
 }
 
 /* Images */

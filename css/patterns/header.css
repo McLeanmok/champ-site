@@ -6,6 +6,7 @@
 */
 /* Overarching header styles  */
 .site-header {
+  background-color: var(--white);
   padding-block: var(--section-padding-xs);
   position: sticky;
   top: 0;
@@ -58,4 +59,11 @@
 
 .site-header__links > .site-header__link:last-child a:hover {
   background-color: var(--site-hover-color);
+}
+
+/* Temporarily hiding the header on mobile devices  */
+@media screen and (max-width: 768px) {
+  .site-header {
+    display: none;
+  }
 }

@@ -1,0 +1,6 @@
+/* 
+    This directory contains all CSS docs that control individual HTML web pages. The names of the files correspond with the name of the page that they are responsible for. For example, about.css controls the about.html page. NOTE that the index page is an exception to this rule. The index.html page is controlled by the home.css file Since this file is reserved for importing all the page style files.
+
+    this file is loaded in the top level index.css file.
+*/
+@import url(home.css)

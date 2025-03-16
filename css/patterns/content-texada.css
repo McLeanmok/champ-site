@@ -1,0 +1,49 @@
+/* 
+    This file controls the styles of Content Section Texada.
+
+    Last updated: 2025-03-15
+    Status: Draft
+
+    Content Section Texada Has space for three talking points, which are displayed in a 2 column grid. Each talking point has heading, text on the left, and a figure tag on the right. The talking points automatically rotate so that every even one, the figure is on the left, and the text is on the right.
+*/
+
+/* Overarching section styles */
+.content-section-texada > .container {
+  display: grid;
+  gap: var(--gap-xl);
+}
+.content-section-texada__title {
+  text-align: center;
+}
+/* List and grid styles */
+.content-section-texada__list {
+  display: grid;
+  gap: var(--gap-md);
+  align-items: center;
+}
+
+/* Individual grid styling  */
+.content-section-texada__item {
+  display: grid;
+  gap: var(--gap-md);
+  grid-template-columns: var(--grid-2);
+  align-items: center;
+}
+
+.content-section-texada__item-content {
+  display: grid;
+  gap: var(--gap-md);
+}
+/* Selecting every other item, and flipping the image to the other side  */
+.content-section-texada__item:nth-child(even)
+  > .content-section-texada__item-media {
+  order: -1;
+}
+
+/* Reseting this behavior on mobile devices  */
+@media (max-width: 768px) {
+  .content-section-texada__item:nth-child(even)
+    > .content-section-texada__item-media {
+    order: 1;
+  }
+}

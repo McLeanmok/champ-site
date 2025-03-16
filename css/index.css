@@ -2,7 +2,9 @@
 @import url(layouts.css);
 @import url(utils.css);
 @import url(styles.css);
-@import url(patterns/index.css)
+@import url(components.css);
+@import url(patterns/index.css);
+@import url(pages/index.css);
 
 /* 
     CODE CREDITS
