@@ -239,10 +239,13 @@
   --gap-lg: clamp(1.5rem, 1.912vw + 0.888rem, 3.5rem);
   --gap-xl: clamp(2rem, 1.912vw + 1.388rem, 4rem);
 
+  /* Contextual gaps */
   --card-gap: var(--gap-md);
   --grid-gap: var(--gap-md);
   --content-gap: var(--gap-sm);
 
+  /* Contextual Padding */
+  --button-padding: var(--sp-100) var(--sp-150);
   /* Grid templates */
   --grid-2: repeat(auto-fit, minmax(500px, 2fr));
   --grid-3: repeat(auto-fit, minmax(333px, 3fr));

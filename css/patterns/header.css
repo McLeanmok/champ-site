@@ -1,0 +1,61 @@
+/* 
+    header.css is imported in the index.css file.
+    control the header of the site
+    status - draft - need to build the mobile version -- q for Robin 
+    Last updated: 2025-03-15
+*/
+/* Overarching header styles  */
+.site-header {
+  padding-block: var(--section-padding-xs);
+  position: sticky;
+  top: 0;
+}
+
+/* Spacing the main flex and the links - Flexbox because I can add more navigation items, and I don't want the system to break  */
+.site-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__links {
+  list-style: none;
+  display: flex;
+  gap: var(--gap-sm);
+  align-items: center;
+  /* padding: var(--sp-100); */
+}
+
+/* individual link styles  */
+.site-header__link a {
+  transition: 0.3s ease-in-out;
+}
+
+
+/* Active link */
+.site-header__link > a[aria-current="page"] {
+    font-weight: var(--fw-600);
+}
+/* Rollover effects - selecting all my "nav" links except the cta */
+
+:where(.site-header__link a:hover) :not(.site-header__link:last-child) {
+  color: var(--primary-200);
+  transform: rotate(5deg);
+}
+
+.site-header__links > .site-header__link:last-child a {
+  background-color: var(--site-color);
+  color: var(--white);
+  padding: var(--button-padding);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+
+  margin-inline-start: 18em;
+}
+
+.site-header__links > .site-header__link:last-child a:hover {
+  background-color: var(--site-hover-color);
+}
