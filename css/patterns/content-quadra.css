@@ -3,8 +3,11 @@
     This is a single column section with a title, text, and two calls to action. this is ideally intended to be used as a call to action section, or a section that is meant to drive conversions.
 
     Page specific usage: global except download page
-    Last updated: 2025-03-15
-    Status: Draft
+    Last updated: 2025-03-17
+    Status: Alpha
+
+    Notes 
+      - text appears to be too wide for narrower screen sizes
 */
 /* Overarching section styles  */
 .content-section-quadra {
@@ -30,4 +33,22 @@
   display: flex;
   gap: var(--gap-sm);
   place-self: center;
+}
+
+/* Mobile styling content  */
+@media (max-width: 768px) {
+  .content-section-quadra__title , .content-section-quadra__lead {
+    text-align: left;
+    margin: 0;
+    width: calc(var(--tet-max-width) / 4);
+  }
+
+  .content-section-quadra__lead {
+    width: calc(var(--tet-max-width) / 2);
+  }
+
+  .content-section-quadra__actions {
+    flex-direction: column;
+    place-self: baseline;
+  }
 }

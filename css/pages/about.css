@@ -1,0 +1,78 @@
+/* 
+    this document contains all the styling content for the about page.
+
+    Patterns that controls sections of the page will be refrenced
+    Status: draft
+    last modified:
+*/
+
+/* Page scoped styles - DO NOT use anywhere else on the website  */
+
+:root {
+    --hero-media-overlap: -10.5rem;
+}
+/* Hero */
+.about-hero > .container {
+    display: grid;
+    gap: var(--gap-md);
+    text-align: center;
+}
+.about-hero__lead {
+    margin: auto;
+}
+.about-hero__media {
+    padding-bottom: 0;
+    margin-bottom: var(--hero-media-overlap);
+}
+
+/* Before  */
+.before {
+    padding-block: calc(var(--section-padding-md) - var(--hero-media-overlap));
+    background-color: var(--seccondary-100);
+    color: var(--white);
+    text-align: center;
+}
+
+.before > .container {
+    display: grid;
+    gap: var(--gap-md);
+}
+.before__paragraph {
+    margin: auto;
+}
+
+/* Solution */
+.solution > .container {
+    display: grid;
+    gap: var(--gap-lg);
+}
+
+.solution__title {
+    text-align: center;
+}
+
+.solution__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2);
+    align-items: center;
+    gap: var(--gap-md);
+}
+.solution >.container > .standard-btn {
+    place-self: flex-start;
+    margin: auto;
+}
+/* Mobile stuff  */
+@media (max-width: 768px) {
+    .about-hero > .container > *{
+        text-align: left;
+    }
+
+    .before {
+        text-align: left;
+    }
+    .before__paragraph {
+        margin: 0;
+        max-width: calc(var(--tet-max-width) / 2);
+    }
+ 
+}

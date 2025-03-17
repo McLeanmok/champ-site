@@ -81,8 +81,14 @@ h6 { font-size: var(--fs-h6); }
 /* Paragraph Styles */
 p,
 li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 figcaption {
-  max-width: 75ch;
+  max-width: var(--tet-max-width);
 }
 
 /* List styles */
@@ -136,4 +142,19 @@ textarea, select {
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
   min-height: 10em;
+}
+
+/* Global responsive behaviors  */
+@media (max-width: 768px) {
+  img {
+    max-width: 50%;
+  }
+  p {
+    text-align: left;
+    max-width: calc(var(--tet-max-width) / 1.8);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    max-width: calc(var(--tet-max-width) / 3.5);
+  }
 }

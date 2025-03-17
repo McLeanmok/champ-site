@@ -13,7 +13,7 @@
     .site-footer__link
 
     Status: beta
-    last modified: 2025-03-16
+    last modified: 2025-03-17
 */
 
 /* Overarching footer styles */
@@ -57,4 +57,15 @@
 }
 .site-footer__link a[aria-current="page"] {
   font-weight: var(--fw-600);
+}
+
+/* Mobile styling content  */
+@media (max-width: 768px) {
+  .site-footer__content {
+    display: grid;
+    gap: var(--gap-md);
+    align-items: left;
+    text-align: left;
+    margin: 0;
+  }
 }

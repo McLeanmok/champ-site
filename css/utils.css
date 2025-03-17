@@ -195,6 +195,9 @@
   /* Fonts */
   --ff-body: 'Montserrat', sans-serif;
   --ff-headings: 'Montserrat', sans-serif;
+  
+  /* max width */
+  --tet-max-width: 75ch;
 
   /* Weights -- You will want to remove some of these utilities based on what font setup your project is using */
   --fw-100: 100;

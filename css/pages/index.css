@@ -3,4 +3,5 @@
 
     this file is loaded in the top level index.css file.
 */
-@import url(home.css)
+@import url(home.css);
+@import url(about.css);
