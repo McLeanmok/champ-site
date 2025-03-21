@@ -16,7 +16,7 @@
     <header class="site-header">
       <div class="container">
         <div class="site-header__content">
-          <a href="index.html">
+          <a href='/'>
           <figure class="site-header__brand">
             <img
               src="media/brand/logo-dark.png"
@@ -27,26 +27,52 @@
           <nav class="site-header__nav">
             <ul class="site-header__links">
               <li class="site-header__link">
-                <a href="index.html" aria-current="page">Home</a>
+                <a aria-current='page' href='/'>Home</a>
               </li>
-              <li class="site-header__link"><a href="about.html">About</a></li>
+              <li class="site-header__link"><a href='/about'>About</a></li>
               <li class="site-header__link">
                 <a href="features.html">Features</a>
               </li>
               <li class="site-header__link">
                 <a href="contact.html">Contact</a>
               </li>
-              <li class="site-header__link site-header__cta">
+              <li class="site-header__link site-header__cta" data-nav-media-type="desktop">
                 <a href="download.html">Download</a>
               </li>
             </ul>
           </nav>
+
+          <!-- Start on a mobile navigation  -->
+          <details class="site-header__mobile-nav">
+            <summary class="site-header__mobile-nav__burger">
+              <span class="burger__bar"></span>
+              <span class="burger__bar"></span>
+              <span class="burger__bar"></span>
+            </summary>
+            <nav class="site-header__nav" data-nav-media-type="mobile"></nav>>
+            <ul class="site-header__links" data-nav-media-type="mobile">
+              <li class="site-header__link" data-nav-media-type="mobile">
+                <a href="index.html" aria-current="page">Home</a>
+              </li>
+              <li class="site-header__link" data-nav-media-type="mobile"><a href="about.html">About</a></li>
+              <li class="site-header__link" data-nav-media-type="mobile">
+                <a href="features.html">Features</a>
+              </li>
+              <li class="site-header__link" data-nav-media-type="mobile">
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="site-header__link" data-nav-media-type="mobile">
+                <a href="download.html">Download</a>
+              </li>
+            </ul>
+          </nav>
+         </details>
+
         </div>
         <!-- End site header content  -->
       </div>
       <!-- End container  -->
     </header>
-
     <main id="main" class="site-main">
         <!-- Hero -->
         <section class="hero-victoria">

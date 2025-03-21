@@ -49,21 +49,20 @@
   transition: 0.3s ease-in-out;
 }
 
-
 /* Active link */
 .site-header__link > a[aria-current="page"] {
-    font-weight: var(--fw-600);
+  font-weight: var(--fw-600);
 }
 /* Rollover effects - selecting all my "nav" links except the cta */
 
-:where(.site-header__link a:hover) :not(.site-header__link:last-child) {
+:where(.site-header__link a:hover) :not(.site-header__cta[data-nav-media-type="desktop"]) {
   color: var(--primary-200);
   transform: rotate(5deg);
 }
 
-.site-header__links > .site-header__link:last-child a {
+.site-header__links > .site-header__cta[data-nav-media-type="desktop"] {
   background-color: var(--site-color);
-  color: var(--white);
+  a{color: var(--white);}
   padding: var(--button-padding);
   border-radius: var(--radius-md);
   font-weight: var(--fw-700);
@@ -78,9 +77,47 @@
   background-color: var(--site-hover-color);
 }
 
+/* Mobile Navigation  */
+
+/* overarching container styles */
+.site-header__mobile-nav {
+  display: none;
+}
+.site-header__mobile-nav__burger {
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+.burger__bar {
+  width: 2rem;
+  height: .3rem;
+  background-color: var(--site-color);
+  cursor: pointer;
+}
+
+/* Link styles */
+.site-header__links[data-nav-media-type="mobile"] {
+  background-color: var(--primary-200);
+  padding: calc(var(--section-padding-md) / 1.5);
+  display: grid;
+  gap: calc( var(--gap-md) / 1.5);
+}
+
+.site-header__link[data-nav-media-type="mobile"] a {
+  color: var(--white);
+}
+
 /* Temporarily hiding the header on mobile devices  */
 @media screen and (max-width: 768px) {
+
   .site-header {
+    padding: var(--section-padding-md);
+  }
+  .site-header__nav {
     display: none;
+  }
+
+  .site-header__mobile-nav {
+    display: block;
   }
 }
