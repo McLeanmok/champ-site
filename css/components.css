@@ -16,6 +16,7 @@
         <a class="standard-btn" data-theme="light">Click me baby one more time</a>
 
     Status: In Progress
+    last modified: 2025-03-23
 */
 
 /* Buttons */
@@ -56,18 +57,54 @@
 }
 /* Cards */
 .primary-card {
-  background-color: var(--surface-900);
-  padding: var(--sp-150) var(--sp-200);
-  display: grid;
-  gap: calc(var(--card-gap) / 2);
-  border-radius: var(--radius-md);
+  background-color: var(--primary-card__bg);
+  padding: var(--primary-card__padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--primary-card__gap);
+  border-radius: var(--primary-card__gap);
 }
 
 .primary-card__title {
-  font-size: var(--fs-h3);  
+  font-size: var(--primary-card__heading-sise);  
 }
 
 .primary-card__body {
-  font-size: var(--fs-p);
+  font-size: var(--primary-card__body-size);
   margin: auto 0;
+}
+
+/* Icon card  */
+.icon-card {
+
+  background-color: var(--primary-card__bg);
+  padding: var(--primary-card__padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--primary-card__gap);
+  border-radius: var(--primary-card__gap);
+}
+.icon-card__icon {
+  order: -1;
+  background-color: var(--chip__bg);
+  padding: var(--chip__padding);
+  border-radius: var(--chip__radius);
+  place-self: flex-start;
+}
+
+.icon-card__title {
+  font-size: var(--primary-card__heading-sise);  
+}
+
+.icon-card__body {
+  font-size: var(--primary-card__body-size);
+  margin: auto 0;
+}
+
+/* Mobile styling content  */
+@media (max-width: 768px) {
+  .icon-card__icon img {
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -38,7 +38,6 @@ dd {
   margin-block-end: 0;
 }
 
-
 /* Removing Margin on various elements */
 
 h1,
@@ -53,7 +52,6 @@ dd {
   margin: 0;
 }
 
-
 /* Balance text wrapping on headings */
 h1,
 h2,
@@ -63,7 +61,12 @@ h4 {
   text-wrap: pretty;
 }
 /* Line heights  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--ff-headings);
   line-height: var(--lh-headings);
 }
@@ -71,12 +74,24 @@ p {
   line-height: var(--lh-p);
 }
 /* Font Sizes */
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
-h4 { font-size: var(--fs-h4); }
-h5 { font-size: var(--fs-h5); }
-h6 { font-size: var(--fs-h6); }
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+h4 {
+  font-size: var(--fs-h4);
+}
+h5 {
+  font-size: var(--fs-h5);
+}
+h6 {
+  font-size: var(--fs-h6);
+}
 
 /* Paragraph Styles */
 p,
@@ -109,8 +124,9 @@ a {
   color: var(--black);
 }
 
-a:focus, a:focus-within {
-  border: 5px solid var(--info-400)
+a:focus,
+a:focus-within {
+  border: 5px solid var(--info-400);
 }
 
 /* Images */
@@ -133,8 +149,10 @@ picture {
   }
 }
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -146,14 +164,23 @@ textarea:not([rows]) {
 
 /* Global responsive behaviors  */
 @media (max-width: 768px) {
-  img {
+  img, video, figure, figcaption, picture {
     max-width: 50%;
+  }
+  /* by default, images shrink to 50% on mobile, but there's content where I don't want that to happen. This is a control that stops this behavior  */
+  img[data-media-type="reserved"], video[data-media-type="reserved"], figure[data-media-type="reserved"], figcaption[data-media-type="reserved"], picture[data-media-type="reserved"] {
+    max-width: 100%;
   }
   p {
     text-align: left;
     max-width: calc(var(--tet-max-width) / 1.8);
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: left;
     max-width: calc(var(--tet-max-width) / 3.5);
   }

@@ -1,0 +1,37 @@
+/* 
+    This file contains styles of the features page. The page is more or less controlled by patterns, but we have some custom work to do in regards to the benefit section 
+
+    status: draft
+    last modified: 2025-03-22
+*/
+
+/* Benefits  */
+
+/* overarching styles */
+.benefits > .container {
+  display: grid;
+  gap: var(--gap-md);
+}
+
+.benefits__title {
+  text-align: center;
+}
+
+/* Base grid setup */
+.benefits__grid {
+  display: grid;
+  grid-template-columns: var(--grid-2);
+  gap: var(--gap-md);
+}
+
+/* Icon card placement */
+.icon-card:nth-child(1) {
+  grid-column-start: -1;
+  grid-column-end: 1;
+}
+/* Mobile styling content  */
+@media (max-width: 768px) {
+  .benefits__title {
+    text-align: left;
+  }
+}

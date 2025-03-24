@@ -2,7 +2,7 @@
     This file is used to style the hero section of the Victoria pattern.
     Imported into the index.css file for the patterns directory 
     Status: beta 
-    Last updated: 2025-03-16
+    Last updated: 2025-03-23
 
     This pattern contains two equal columns. The left column contains text content, and the right column contains an image. Hero Section Victoria should be used on the index, and features pages of the site.
 
@@ -16,15 +16,23 @@
 .hero-victoria__grid {
   display: grid;
   gap: var(--grid-gap);
-    grid-template-columns: var(--grid-2);
+  grid-template-columns: var(--grid-2);
+  align-items: center;
 }
 /* Left text styles  */
 .hero-victoria__content {
-    display: grid;
-    border: 5px solid var(--color-primary);
-    gap: calc(var(--grid-gap) / 2);
+  display: grid;
+  border: 5px solid var(--color-primary);
+  gap: calc(var(--grid-gap) / 2);
 }
 
 .hero-victoria__content > * {
   place-self: flex-start;
+}
+
+/* Building in an option for the hero content to use Flexbox, because when I removed the button, there's some weird spacing going on  */
+.hero-victoria__content[data-hero-vic_method] {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--grid-gap) / 2);
 }

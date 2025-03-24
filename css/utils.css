@@ -262,11 +262,21 @@
   --radius-xl: var(--sp-400);
   --radius-circle: 2000%;
 
-  /* Widths */
-  --width-250: 25%;
-  --width-500: 50%;
-  --width-700: 75%
+  /* Experimental - Semantic variable sets. These are essentially recipes for various website components. The reason why I'm introducing them now is because I am going to build my icon card which is going to share a lot of the same styling decisions, and I want things to stay consistent */
 
+  /* Card Semantic variables  */
+  --primary-card__bg: var(--surface-900);
+  --primary-card__text-color: var(--black); 
+  --primary-card__padding: clamp(0.5rem, 0.956vw + 0.194rem, 1.5rem) clamp(1rem, 0.956vw + 0.694rem, 2rem);
+  --primary-card__gap: calc(var(--card-gap) / 2);
+  --primary-card__radius: var(--radius-md);
+  --primary-card__heading-sise: var(--fs-h4);
+  --primary-card__body-size: var(--fs-p);
+
+  /* Chip Semantic variables  */
+  --chip__bg: var(--seccondary-200);
+  --chip__padding: var(--sp-100);
+  --chip__radius: var(--radius-circle);
 }
 
 /* Classes -- not every prop will get its own utility class. We only offer classes that would benefit you in building sites faster with best practices in mind */
