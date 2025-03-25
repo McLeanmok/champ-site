@@ -43,7 +43,7 @@
 
 /* Building in a second theme */
 .content-section-texada[data-texada-theme="seccondary"] {
-  background-color: var(--surface-800);
+  background-color: var(--surface-900);
 }
 /* Reseting this behavior on mobile devices  */
 @media (max-width: 768px) {
