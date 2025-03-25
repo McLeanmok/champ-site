@@ -1,0 +1,47 @@
+/* 
+    This file is responsible for the download page. This is more or less controlled by patterns, but we have some custom work to do in terms of getting the steps setup, and the contribution cta
+
+    Status: draft.
+    last modified - 2025-03-24
+*/
+
+.start {
+    background-color: var(--seccondary-700);
+}
+.start > .container {
+    display: grid;
+    gap: var(--gap-md);
+}
+
+.start__title {
+    text-align: center;
+}
+
+.start__grid {
+    display: grid;
+    grid-template-columns: var(--grid-3);
+    gap: var(--grid-gap);
+}
+/* Contribution CTA */
+.contribute >  .container {
+    display: grid;
+    gap: var(--gap-lg);
+}
+.contribute__title {
+    text-align: center;
+}
+
+.contribute__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2);
+    gap: var(--gap-md);
+    align-items: center;
+}
+
+.contribute__grid-left {
+    display: grid;
+    gap: var(--gap-md);
+}
+.contribute__grid-left > * {
+    place-self: flex-start;
+}

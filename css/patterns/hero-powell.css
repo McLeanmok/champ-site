@@ -1,0 +1,34 @@
+/* 
+    This file controls hero section powell. 
+
+    Hero Section Powell is a simple section with centered aligned text. It is typically used for a headline, a lead Paragraph, and optionally a Call-to-action
+
+    Status: draft
+    Last modified: 2025-03-24
+*/
+
+/* Overarching styles */
+.hero-powell > .container {
+    display: grid;
+    gap: var(--gap-md);
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-powell__lead {
+    margin: auto;
+}
+.hero-powell >.container > *:not(.standard-btn) {
+    place-self: flex-start;
+}
+
+.hero-powell > .container > .standard-btn  {
+    justify-self: center;
+}
+
+/* Mobile styling content  */
+@media (max-width: 768px) {
+    .hero-powell > .container > .standard-btn {
+        justify-self: baseline;
+    }
+}

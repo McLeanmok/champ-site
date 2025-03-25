@@ -25,7 +25,7 @@
 }
 
 /* Icon card placement */
-.icon-card:nth-child(1) {
+.benefits__grid>  .icon-card:nth-child(1) {
   grid-column-start: -1;
   grid-column-end: 1;
 }

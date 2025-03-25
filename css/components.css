@@ -101,6 +101,24 @@
   margin: auto 0;
 }
 
+/* Step card */
+.step-card {
+  background-color: var(--primary-card__bg);
+  padding: var(--primary-card__padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--primary-card__gap);
+  border-radius: var(--primary-card__radius);
+}
+.step-card__title {
+  font-size: var(--primary-card__body-size);
+}
+
+.step-card__body {
+  font-size: var(--primary-card__body-size);
+  margin: 0 auto;
+}
+
 /* Mobile styling content  */
 @media (max-width: 768px) {
   .icon-card__icon img {

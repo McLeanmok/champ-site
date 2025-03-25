@@ -3,9 +3,16 @@
     for example, the header, footer, and hero sections
     this file is the entry point for all of these patterns, and should import all of the other files in this directory to the top level index.css file    
 */
+
+/* Global templates */
 @import url(header.css);
 @import url(footer.css);
+
+/* Heros  */
 @import url(hero-victoria.css);
+@import url(hero-powell.css);
+
+/* Content sections */
 @import url(content-texada.css);
 @import url(content-hornby.css);
 @import url(content-quadra.css);
