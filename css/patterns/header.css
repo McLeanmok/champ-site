@@ -21,6 +21,11 @@
 
     - for the future when I'm converting this website to astro, I shall first out how to toggle the aria-current attribute with JS
 */
+
+/* Locally scoped variables - don't use outside the context of this template  */
+:root {
+  --navlink-click-area: 0.5em;
+}
 /* Overarching header styles  */
 .site-header {
   background-color: var(--white);
@@ -39,17 +44,23 @@
 .site-header__links {
   list-style: none;
   display: flex;
-  gap: var(--gap-sm);
+  gap: var(--gap-md);
   align-items: center;
   /* padding: var(--sp-100); */
+
 }
 
 /* individual link styles  */
-.site-header__link a {
+.site-header__link a:not(.site-header__link a:last-child) {
   transition: 0.3s ease-in-out;
 }
 
+.site-header__link a {
+  padding: 0.5em;  /* experimental */
+
+}
 /* Active link */
+
 .site-header__link > a[aria-current="page"] {
   font-weight: var(--fw-600);
 }
@@ -62,15 +73,17 @@
 
 .site-header__links > .site-header__cta[data-nav-media-type="desktop"] {
   background-color: var(--site-color);
-  a{color: var(--white);}
   padding: var(--button-padding);
   border-radius: var(--radius-md);
   font-weight: var(--fw-700);
   cursor: pointer;
-
+  
   transition: 0.3s ease-in-out;
-
+  
   margin-inline-start: 18em;
+  a{
+    padding: 0
+    ;color: var(--white);}
 }
 
 .site-header__links > .site-header__link:last-child a:hover {
