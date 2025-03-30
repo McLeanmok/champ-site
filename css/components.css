@@ -119,10 +119,25 @@
   margin: 0 auto;
 }
 
+/* Form elements  */
+.contact-form__input {
+  background-color: var(--primary-900);
+  padding: var(--sp-100) var(--sp-150);
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
+.contact-form__input:focus-visible {
+  border: var(--site-focus-style);
+}
 /* Mobile styling content  */
 @media (max-width: 768px) {
   .icon-card__icon img {
     width: 100%;
     height: 100%;
+  }
+
+  .primary-card {
+    max-width: 55%;
   }
 }

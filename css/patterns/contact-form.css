@@ -1,0 +1,49 @@
+/* 
+    This file is solely responsible for styling the contact form pattern. 
+
+    Last modified: 2025-03-29
+    Status: Draft
+
+    notes 
+        - used in line media queries in this file - This is a relatively new feature
+*/
+
+.contact-form {
+    display: grid;
+    gap: var(--gap-md);
+    justify-content: center;
+
+    @media (width < 768px) {
+        justify-content: start;
+    }
+}
+
+
+.contact-form > * {
+    place-self: flex-start;
+}
+
+.contact-form__feild-row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: var(--gap-sm);
+
+    > * {
+        width: 50%;
+    }
+
+    @media (width < 768px) {
+        grid-template-columns: 1fr;
+        > * {
+            width: 100%;
+    }
+} /* end of in-line media query */
+}
+
+.contact-form__input {
+width: 200%;
+
+@media (width < 768px) {
+    width: 150%;
+}
+}

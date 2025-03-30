@@ -39,5 +39,6 @@
 @media (max-width: 768px) {
     .content-section-hornby__text {
         text-align: left;
+        p {margin: 0;}
     }
 }

@@ -20,11 +20,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  min-width: 100vh;
   color: var(--text-color);
   background-color: var(--body-color);
 }
-
 /* Removing Bottom Margins from elements */
 h1,
 h2,
@@ -126,7 +124,7 @@ a {
 
 a:focus,
 a:focus-within {
-  border: 5px solid var(--info-400);
+  border: var(--site-focus-style);
 }
 
 /* Images */
@@ -153,6 +151,7 @@ input,
 button,
 textarea,
 select {
+  display: block;
   font-family: inherit;
   font-size: inherit;
 }
@@ -162,19 +161,29 @@ textarea:not([rows]) {
   min-height: 10em;
 }
 
+/* Taking away the border and padding from feildset elements  */
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+/* Making inputs full width */
+input {
+  /* width: 100%; */
+}
+/* Custom selection color  */
+::selection {
+  background-color: var(--site-color);
+  color: var(--white);
+}
 /* Global responsive behaviors  */
 @media (max-width: 768px) {
-  img, video, figure, figcaption, picture {
-    max-width: 50%;
-  }
-  /* by default, images shrink to 50% on mobile, but there's content where I don't want that to happen. This is a control that stops this behavior  */
-  img[data-media-type="reserved"], video[data-media-type="reserved"], figure[data-media-type="reserved"], figcaption[data-media-type="reserved"], picture[data-media-type="reserved"] {
-    max-width: 100%;
-  }
+
   p {
     text-align: left;
-    max-width: calc(var(--tet-max-width) / 1.8);
+    line-height: calc(var(--lh-p) * 1.2);
   }
+
   h1,
   h2,
   h3,
@@ -182,6 +191,5 @@ textarea:not([rows]) {
   h5,
   h6 {
     text-align: left;
-    max-width: calc(var(--tet-max-width) / 3.5);
   }
 }

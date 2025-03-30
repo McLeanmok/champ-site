@@ -251,7 +251,7 @@
   --button-padding: var(--sp-100) var(--sp-150);
   /* Grid templates */
   --grid-2: repeat(auto-fit, minmax(min(500px, 100%), 2fr));
-  --grid-3: repeat(auto-fit, minmax(333px, 3fr));
+  --grid-3: repeat(auto-fit, minmax(min(330px, 100%), 3fr));
   --grid-4: repeat(auto-fit, minmax(250px, 4fr));
   --grid-5: repeat(auto-fit, minmax(200px, 5fr));
 
@@ -262,6 +262,9 @@
   --radius-xl: var(--sp-400);
   --radius-circle: 2000%;
 
+
+  /* focus style */
+  --site-focus-style: 5px solid var(--info-400);
   /* Experimental - Semantic variable sets. These are essentially recipes for various website components. The reason why I'm introducing them now is because I am going to build my icon card which is going to share a lot of the same styling decisions, and I want things to stay consistent */
 
   /* Card Semantic variables  */

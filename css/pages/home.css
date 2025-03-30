@@ -9,9 +9,9 @@
     Note - Responsive issues 
 */
 
-/* Hero section  url(../patterns/hero-victoria.css)*/
 
 /* About */
+/* Overarching section styles  */
 .about-home {
   background-color: var(--seccondary-100);
   color: var(--white);
@@ -22,14 +22,6 @@
   gap: var(--gap-xl);
 }
 
-.about-home__text {
-  display: grid;
-  gap: var(--gap-md);
-  text-align: center;
-}
-.about-home__lead {
-  margin: auto;
-}
 
 .about-home__grid {
   display: grid;
@@ -43,10 +35,32 @@
   gap: var(--gap-md);
 }
 
+/* Text styling - basically center aligning the content & displaying the text lockup as a grid */
+.about-home__text {
+  display: grid;
+  gap: var(--gap-md);
+  text-align: center;
+}
+.about-home__lead {
+  margin: auto;
+}
+
+/* Centering the button */
 .about-home > .container > .standard-btn {
   place-self: center;
 }
 
+/* Mobile styling content  p*/
+@media (max-width: 768px) {
+  .about-home__lead {
+    margin: 0;
+  }
+
+  .about-home > .container > .standard-btn {
+    place-self: flex-start;
+  }
+
+}
 /* Features - Content Section Texada -../patterns/content-texada.css */
 /* Benefits - Content Section Hornby - ../patterns/content-hornby.css */
 /* CTA - Content Section Quadra - ../patterns/content-quadra.css */

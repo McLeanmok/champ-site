@@ -2,20 +2,11 @@
     header.css is imported in the index.css file.
     control the header of the site
     status - alpha 
-    Last updated: 2025-03-16
+    Last updated: 2025-03-27
 
     Notes:
-    - unsure about how to handle the mobile version of the header -- need to discuss with Robin
-    - I need to add a hamburger menu for the mobile version
-    - some sort of pop over would be ideal - little to no JS
-    - 768px is the breakpoint for the mobile version
-      - at this point, the header will be hidden
-      - the hamburger menu will be displayed
-      - user should be able to toggle the menu
-      - the menu should be a pop-over
-      - Animation would be nice?? - probably not necessary, but it would be nice
-    - I need to add a hover effect to the links
-    - I need to style the CTA in a different fashion, so it's appropriate for that schreen size
+    - animation 
+    - still need to improve the popout design 
     - Acessability is important
     - slim code is important
 
@@ -31,6 +22,7 @@
   background-color: var(--white);
   padding-block: var(--section-padding-xs);
   position: sticky;
+  position: relative;
   top: 0;
 }
 
@@ -44,50 +36,26 @@
 .site-header__links {
   list-style: none;
   display: flex;
-  gap: var(--gap-md);
+  gap: calc(var(--gap-md) - var(--navlink-click-area));
   align-items: center;
-  /* padding: var(--sp-100); */
-
 }
 
 /* individual link styles  */
-.site-header__link a:not(.site-header__link a:last-child) {
-  transition: 0.3s ease-in-out;
-}
-
 .site-header__link a {
-  padding: 0.5em;  /* experimental */
+  transition: 0.3s ease-in-out;
+  padding: var(--navlink-click-area);  /* experimental */
 
 }
+
 /* Active link */
 
 .site-header__link > a[aria-current="page"] {
   font-weight: var(--fw-600);
 }
 /* Rollover effects - selecting all my "nav" links except the cta */
-
-:where(.site-header__link a:hover) :not(.site-header__cta[data-nav-media-type="desktop"]) {
-  color: var(--primary-200);
-  transform: rotate(5deg);
-}
-
-.site-header__links > .site-header__cta[data-nav-media-type="desktop"] {
-  background-color: var(--site-color);
-  padding: var(--button-padding);
-  border-radius: var(--radius-md);
-  font-weight: var(--fw-700);
-  cursor: pointer;
-  
-  transition: 0.3s ease-in-out;
-  
-  margin-inline-start: 18em;
-  a{
-    padding: 0
-    ;color: var(--white);}
-}
-
-.site-header__links > .site-header__link:last-child a:hover {
-  background-color: var(--site-hover-color);
+.site-header__link a:hover {
+  rotate: 2deg;
+  color: var(--site-hover-color);
 }
 
 /* Mobile Navigation  */
@@ -101,19 +69,32 @@
   display: grid;
   gap: 0.4rem;
 }
+
 .burger__bar {
   width: 2rem;
   height: .3rem;
   background-color: var(--site-color);
   cursor: pointer;
 }
+.burger__bar[open] {
+  background-color: var(--white);
+  z-index: 5;
+
+}
 
 /* Link styles */
 .site-header__links[data-nav-media-type="mobile"] {
-  background-color: var(--primary-200);
-  padding: calc(var(--section-padding-md) / 1.5);
+  background-color: hsl(from var(--primary-hsl) h s l / .99);
+  padding: calc(var(--section-padding-md) / 2);
   display: grid;
-  gap: calc( var(--gap-md) / 1.5);
+  gap: calc( var(--gap-md) / 3);
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vw;
+  min-height: 100%;
+  z-index: 0;
 }
 
 .site-header__link[data-nav-media-type="mobile"] a {
@@ -126,6 +107,10 @@
   .site-header {
     padding: var(--section-padding-md);
   }
+
+  .site-header__content > .standard-btn {
+    display: none;
+  }
   .site-header__nav {
     display: none;
   }
@@ -133,4 +118,9 @@
   .site-header__mobile-nav {
     display: block;
   }
+
+  .site-header__brand {
+    width: 80%;
+  }
+  
 }

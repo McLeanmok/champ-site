@@ -1,0 +1,28 @@
+/* 
+    This document is responsible for styling related to the content section Sidney pattern 
+
+    Content Section Sidney is used primarily to display a form on a page.
+    last modified: 2025-03-29
+*/
+
+/* overarching section styles  */
+.content-section-sidney  > .container {
+    display: grid;
+    gap: var(--gap-lg);
+}
+
+/* building in a secondary theme */
+.content-section-sidney[data-sidney-theme="seccondary"] {
+    background-color: var(--surface-800);
+}
+.content-section-sidney__text {
+    display: grid;
+    gap: var(--gap-md);
+    text-align: center;
+}
+
+
+.content-section-sidney__lead {
+    margin: auto;
+}
+

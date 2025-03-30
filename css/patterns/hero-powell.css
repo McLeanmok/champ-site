@@ -14,13 +14,14 @@
     text-align: center;
     justify-content: center;
 }
+.hero-powell__headline {
+    text-align: center;
+}
 
 .hero-powell__lead {
     margin: auto;
 }
-.hero-powell >.container > *:not(.standard-btn) {
-    place-self: flex-start;
-}
+
 
 .hero-powell > .container > .standard-btn  {
     justify-self: center;
@@ -30,5 +31,8 @@
 @media (max-width: 768px) {
     .hero-powell > .container > .standard-btn {
         justify-self: baseline;
+    }
+    .hero-powell__headline {
+        text-align: left;
     }
 }
