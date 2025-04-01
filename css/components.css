@@ -82,7 +82,7 @@
   padding: var(--primary-card__padding);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: var(--primary-card__gap);
   border-radius: var(--primary-card__gap);
 }
