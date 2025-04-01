@@ -1,7 +1,29 @@
+/* 
+    index.css - bundler file that gets loaded onto the site and provides key detail for CSS setu - NO custom CSS should be written in this file!
+
+    Last modified: 2025-03-31
+    Status: stable 
+*/
+/* 
+    Project Map
+    Github repository link - https://github.com/McLeanmok/champ-site
+    At the root level are files that house system styling.
+        utils.css - All the variables and utility classes for ChampCSS
+        reset.css - general reset file for the website
+        components.css - atomic level website components 
+    patterns - any repeatable sections/templates that are used repeatedly across the website 
+    pages - page specific styling 
+
+
+    STANDARDS
+        - if you need to add a new page that requires custom work, please add a new file in pages
+        - if you need to add a bit of reusable styling, it's best to add it into utils.css 
+        - if a section might be reusable, better to make a pattern out of it. In that case, add a pattern. I am using Vancouver Island names of towns, and Gulf islands. If you run out, move to cities in British Columbia.
+    
+*/
 @import url("reset.css");
 @import url(layouts.css);
 @import url(utils.css);
-@import url(styles.css);
 @import url(components.css);
 @import url(patterns/index.css);
 @import url(pages/index.css);
@@ -17,3 +39,4 @@
     screen reader only class gotten from - https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
     
 */
+

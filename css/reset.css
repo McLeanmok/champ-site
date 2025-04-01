@@ -167,10 +167,6 @@ fieldset {
   padding: 0;
 }
 
-/* Making inputs full width */
-input {
-  /* width: 100%; */
-}
 /* Custom selection color  */
 ::selection {
   background-color: var(--site-color);

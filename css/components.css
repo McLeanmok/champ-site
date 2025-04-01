@@ -59,8 +59,8 @@
 .primary-card {
   background-color: var(--primary-card__bg);
   padding: var(--primary-card__padding);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  
   gap: var(--primary-card__gap);
   border-radius: var(--primary-card__gap);
 }
@@ -71,7 +71,7 @@
 
 .primary-card__body {
   font-size: var(--primary-card__body-size);
-  margin: auto 0;
+  margin: 0 auto;
 }
 
 /* Icon card  */
@@ -130,14 +130,4 @@
 .contact-form__input:focus-visible {
   border: var(--site-focus-style);
 }
-/* Mobile styling content  */
-@media (max-width: 768px) {
-  .icon-card__icon img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .primary-card {
-    max-width: 55%;
-  }
-}
+/
