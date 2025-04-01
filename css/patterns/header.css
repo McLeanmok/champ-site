@@ -52,6 +52,9 @@
 .site-header__link > a[aria-current="page"] {
   font-weight: var(--fw-800);
 }
+.site-header__link > a:visited {
+  rotate: 2deg;
+}
 /* Rollover effects - selecting all my "nav" links except the cta */
 .site-header__link a:hover {
   rotate: 2deg;
