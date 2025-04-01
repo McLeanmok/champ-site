@@ -56,7 +56,7 @@
   color: var(--primary-400);
 }
 .site-footer__link a[aria-current="page"] {
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-800);
 }
 
 /* Mobile styling content  */

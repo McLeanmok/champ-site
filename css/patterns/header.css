@@ -50,7 +50,7 @@
 /* Active link */
 
 .site-header__link > a[aria-current="page"] {
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-800);
 }
 /* Rollover effects - selecting all my "nav" links except the cta */
 .site-header__link a:hover {
