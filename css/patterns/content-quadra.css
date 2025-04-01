@@ -40,11 +40,11 @@
   .content-section-quadra__title , .content-section-quadra__lead {
     text-align: left;
     margin: 0;
-    width: calc(var(--tet-max-width) / 4);
+    /* width: calc(var(--tet-max-width) / 4); */
   }
 
   .content-section-quadra__lead {
-    width: calc(var(--tet-max-width) / 2);
+    width: calc(var(--tet-max-width) / 2.6);
   }
 
   .content-section-quadra__actions {
