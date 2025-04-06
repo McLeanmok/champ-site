@@ -8,66 +8,37 @@
     <title>Download | ChampCSS </title>
 </head>
 <body>
-      <!-- Site header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="site-header__content">
-        <a href='/'>
-        <figure class="site-header__brand">
-          <img
-            src="media/brand/logo-dark.png"
-            alt="The ChampCSS logo. The name with crowns embedded in the c letters"
-            title="The ChampCSS logo"
-            data-media-type="reserved"
-          />
-        </figure> </a>
-        <nav class="site-header__nav">
-          <ul class="site-header__links">
-            <li class="site-header__link">
-              <a href='/'>Home</a>
-            </li>
-            <li class="site-header__link"><a href='/about'>About</a></li>
-            <li class="site-header__link">
-              <a href="features.html">Features</a>
-            </li>
-            <li class="site-header__link">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="download.html" class="standard-btn" aria-current="page">Download</a>
-
-        <!-- Mobile navigation  -->
-        <details class="site-header__mobile-nav">
-          <summary class="site-header__mobile-nav__burger">
-            <span class="burger__bar"></span>
-            <span class="burger__bar"></span>
-            <span class="burger__bar"></span>
-          </summary>
-          <nav class="site-header__nav" data-nav-media-type="mobile">
-          <ul class="site-header__links" data-nav-media-type="mobile">
-            <li class="site-header__link" data-nav-media-type="mobile">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="site-header__link" data-nav-media-type="mobile"><a href="about.html">About</a></li>
-            <li class="site-header__link" data-nav-media-type="mobile">
-              <a href="features.html">Features</a>
-            </li>
-            <li class="site-header__link" data-nav-media-type="mobile">
-              <a href="contact.html">Contact</a>
-            </li>
-            <li class="site-header__link" data-nav-media-type="mobile">
-              <a href="download.html" aria-current="page">Download</a>
-            </li>
-          </ul>
-        </nav>
-       </details>
-
+     <!-- Site header -->
+     <header class="site-header">
+      <div class="container">
+        <div class="site-header__content">
+          <a href='/'>
+          <figure class="site-header__brand">
+            <img
+              src="media/brand/logo-dark.png"
+              alt="The ChampCSS logo. The name with crowns embedded in the c letters"
+              title="The ChampCSS logo"
+              data-media-type="reserved"
+            />
+          </figure> </a>
+          <!-- checkbox for mobile navigation  -->
+          <input type="checkbox" id="nav-toggle" class="site-header__nav-toggle" />
+          <label for="nav-toggle" class="site-header__nav-toggle-label" aria-label="Toggle navigation">
+          </label>
+          <nav class="site-header__nav">
+            
+            <ul class="site-header__links">
+                <li class="site-header__link"><a href="index.html">Home</a></li>
+                <li class="site-header__link"><a href="about.html">About</a></li>
+                <li class="site-header__link"><a href="features.html">Features</a></li>
+                <li class="site-header__link"><a href="contact.html">Contact</a></li>
+                <li class="site-header__link site-header__cta"><a href="download.html" aria-current="page">Download</a></li>
+            </ul>
+        </div>
+        <!-- End site header content  -->
       </div>
-      <!-- End site header content  -->
-    </div>
-    <!-- End container  -->
-  </header>
+      <!-- End container  -->
+    </header>
     
     <main id="main">
         <!-- Hero -->

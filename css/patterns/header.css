@@ -33,6 +33,14 @@
   align-items: center;
 }
 
+/* hiding the toggle, and mobile on desktop */
+.site-header__nav-toggle {
+  display: none;
+}
+.site-header__nav-toggle-label {
+  display: none;
+}
+
 .site-header__links {
   list-style: none;
   display: flex;
@@ -43,8 +51,7 @@
 /* individual link styles  */
 .site-header__link a {
   transition: 0.3s ease-in-out;
-  padding: var(--navlink-click-area);  /* experimental */
-
+  padding: var(--navlink-click-area); /* experimental */
 }
 
 /* Active link */
@@ -56,74 +63,95 @@
   rotate: 2deg;
 }
 /* Rollover effects - selecting all my "nav" links except the cta */
-.site-header__link a:hover {
+:where(.site-header__link a:hover) :not(.site-header__link:last-child) {
   rotate: 2deg;
   color: var(--site-hover-color);
 }
 
-/* Mobile Navigation  */
-
-/* overarching container styles */
-.site-header__mobile-nav {
-  display: none;
-}
-.site-header__mobile-nav__burger {
-  list-style: none;
-  display: grid;
-  gap: 0.4rem;
-}
-
-.burger__bar {
-  width: 2rem;
-  height: .3rem;
+.site-header__links > .site-header__link:last-child a {
   background-color: var(--site-color);
-  cursor: pointer;
-}
-.burger__bar[open] {
-  background-color: var(--white);
-  z-index: 5;
-
-}
-
-/* Link styles */
-.site-header__links[data-nav-media-type="mobile"] {
-  background-color: hsl(from var(--primary-hsl) h s l / .99);
-  padding: calc(var(--section-padding-md) / 2);
-  display: grid;
-  gap: calc( var(--gap-md) / 3);
-  position: absolute;
-  inset: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vw;
-  min-height: 100%;
-  z-index: 0;
-}
-
-.site-header__link[data-nav-media-type="mobile"] a {
   color: var(--white);
+  padding: var(--button-padding);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+
+  margin-inline-start: 18em;
 }
+
+
 
 /* Temporarily hiding the header on mobile devices  */
 @media screen and (max-width: 768px) {
 
+/* Media query scoped variables - DON'T USE ANYWHERE ELSE */
+  :root {
+    --mobile-icon-size: 60%;
+  }
+  /* adding more padding (did not mean to rhyme) to the overall containing block */
   .site-header {
     padding: var(--section-padding-md);
+    position: sticky;
+    top: 0;
+  }
+  
+  .site-header__nav-toggle-label {
+  display: block;
+  height: 5em;
+  width: 5em;
+  padding: var(--sp-100);
+  cursor: pointer;
+  background-image: url(../../media/brand/menu-open.svg);
+  background-repeat: no-repeat;
+  background-size: var(--mobile-icon-size);
+  background-position: center;
   }
 
-  .site-header__content > .standard-btn {
-    display: none;
-  }
+/* Showing the navigation when the box is checked  */
+.site-header__nav-toggle:checked ~ .site-header__nav {
+  display: flex;}
+
+  /* hiding the nav links */
   .site-header__nav {
     display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+   inset: 0;
+   height: 100vh;
+   background-color: hsl(from var(--primary-hsl) h s l / 0.9);
+    padding: var(--section-padding-md);
+    text-align: center;
+    transition: 0.3s ease-in-out;
   }
 
-  .site-header__mobile-nav {
-    display: block;
+  .site-header__links {
+    place-self: center;
+    margin: 0;
+    flex-direction: column;
+    gap: calc(var(--gap-md) / 2);
   }
+  .site-header__link a {
+    color: var(--white);
+  }
+  .site-header__links > .site-header__link:last-child a {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    font-weight: var(--fw-400);
 
+  } 
+
+  .site-header__nav-toggle:checked ~ .site-header__nav-toggle-label {
+    z-index: 3;
+    background-image: url(../../media/brand/menu-close.svg);
+  }
+  
   .site-header__brand {
     width: 80%;
   }
-  
 }
