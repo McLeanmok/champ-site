@@ -2,14 +2,11 @@
     header.css is imported in the index.css file.
     control the header of the site
     status - alpha 
-    Last updated: 2025-03-27
+    Last updated: 2025-04-05
 
     Notes:
     - animation 
-    - still need to improve the popout design 
-    - Acessability is important
-    - slim code is important
-
+    
     - for the future when I'm converting this website to astro, I shall first out how to toggle the aria-current attribute with JS
 */
 
@@ -111,7 +108,8 @@
 
 /* Showing the navigation when the box is checked  */
 .site-header__nav-toggle:checked ~ .site-header__nav {
-  display: flex;}
+  display: flex;
+}
 
   /* hiding the nav links */
   .site-header__nav {
@@ -125,7 +123,6 @@
    background-color: hsl(from var(--primary-hsl) h s l / 0.9);
     padding: var(--section-padding-md);
     text-align: center;
-    transition: 0.3s ease-in-out;
   }
 
   .site-header__links {
