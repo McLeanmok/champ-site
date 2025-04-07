@@ -145,7 +145,7 @@
 @media (prefers-color-scheme: dark) {
   /* Cards */
   .primary-card, .icon-card, .step-card {
-    background-color: var(--surface-200);
+    background-color: var(--surface-100);
   }
   .primary-card__body, .icon-card__body, .step-card__body {
     color: var(--white);
