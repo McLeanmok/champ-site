@@ -7,7 +7,14 @@
     <link
       rel="shortcut icon"
       href="media/brand/favicon.png"
+      media="(prefers-color-scheme: light)"
       type="image/x-icon"
+    />
+    <link
+     rel="shortcut icon"
+      href="media/brand/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+      type="image/x-icon" 
     />
     <title>About | ChampCSS</title>
   </head>
@@ -21,11 +28,19 @@
           <a href="/">
             <figure class="site-header__brand">
               <img
-                src="media/brand/logo-dark.png"
-                alt="The ChampCSS logo. The name with crowns embedded in the c letters"
-                title="The ChampCSS logo"
-                data-media-type="reserved"
-              />
+              src="media/brand/logo-dark.png"
+              alt="The ChampCSS logo. The name with crowns embedded in the c letters"
+              title="The ChampCSS logo"
+              data-media-type="light"
+              media="(prefers-color-scheme: light)"
+            />
+            <img
+              src="media/brand/logo-light.png"
+              alt="The ChampCSS logo. The name with crowns embedded in the c letters"
+              title="The ChampCSS logo"
+              data-media-type="dark"
+              media="(prefers-color-scheme: dark)"
+            />
             </figure>
           </a>
          <!-- checkbox for mobile navigation  -->

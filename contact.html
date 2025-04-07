@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/brand/favicon.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="shortcut icon" href="media/brand/favicon-light.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/index.css">
     <title>Contact | ChampCSS </title>
 </head>
@@ -16,11 +18,19 @@
           <a href="/">
             <figure class="site-header__brand">
               <img
-                src="media/brand/logo-dark.png"
-                alt="The ChampCSS logo. The name with crowns embedded in the c letters"
-                title="The ChampCSS logo"
-                data-media-type="reserved"
-              />
+              src="media/brand/logo-dark.png"
+              alt="The ChampCSS logo. The name with crowns embedded in the c letters"
+              title="The ChampCSS logo"
+              data-media-type="light"
+              media="(prefers-color-scheme: light)"
+            />
+            <img
+              src="media/brand/logo-light.png"
+              alt="The ChampCSS logo. The name with crowns embedded in the c letters"
+              title="The ChampCSS logo"
+              data-media-type="dark"
+              media="(prefers-color-scheme: dark)"
+            />
             </figure>
           </a>
          <!-- checkbox for mobile navigation  -->
@@ -31,7 +41,7 @@
            
            <ul class="site-header__links">
                <li class="site-header__link"><a href="index.html">Home</a></li>
-               <li class="site-header__link"><a href="about.html" aria-current="page">About</a></li>
+               <li class="site-header__link"><a href="about.html">About</a></li>
                <li class="site-header__link"><a href="features.html">Features</a></li>
                <li class="site-header__link"><a href="contact.html" aria-current="page">Contact</a></li>
                <li class="site-header__link site-header__cta"><a href="download.html">Download</a></li>

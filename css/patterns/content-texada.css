@@ -44,6 +44,11 @@
 /* Building in a second theme */
 .content-section-texada[data-texada-theme="seccondary"] {
   background-color: var(--surface-900);
+
+  /* making this theme compatible with dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--surface-200);
+  }
 }
 /* Reseting this behavior on mobile devices  */
 @media (max-width: 768px) {

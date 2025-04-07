@@ -21,6 +21,11 @@
   position: sticky;
   position: relative;
   top: 0;
+
+  /* Making the background compatible with dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--surface-100);
+  }
 }
 
 /* Spacing the main flex and the links - Flexbox because I can add more navigation items, and I don't want the system to break  */
@@ -49,8 +54,28 @@
 .site-header__link a {
   transition: 0.3s ease-in-out;
   padding: var(--navlink-click-area); /* experimental */
+
+  color: var(--black);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--white);
+  }
 }
 
+/* Logo Swapping  */
+.site-header__brand {
+  @media (prefers-color-scheme: dark) {
+    [media="(prefers-color-scheme: light)"] {
+      display: none;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    [media="(prefers-color-scheme: dark)"] {
+      display: none;
+    }
+  }
+}
 /* Active link */
 
 .site-header__link > a[aria-current="page"] {
@@ -78,38 +103,40 @@
   margin-inline-start: 18em;
 }
 
-
-
 /* Temporarily hiding the header on mobile devices  */
 @media screen and (max-width: 768px) {
-
-/* Media query scoped variables - DON'T USE ANYWHERE ELSE */
+  /* Media query scoped variables - DON'T USE ANYWHERE ELSE */
   :root {
     --mobile-icon-size: 60%;
   }
   /* adding more padding (did not mean to rhyme) to the overall containing block */
   .site-header {
-    padding: var(--section-padding-md);
+    padding: calc(var(--section-padding-md) / 2);
     position: sticky;
     top: 0;
   }
-  
+
   .site-header__nav-toggle-label {
-  display: block;
-  height: 5em;
-  width: 5em;
-  padding: var(--sp-100);
-  cursor: pointer;
-  background-image: url(../../media/brand/menu-open.svg);
-  background-repeat: no-repeat;
-  background-size: var(--mobile-icon-size);
-  background-position: center;
+    display: block;
+    height: 5em;
+    width: 5em;
+    padding: var(--sp-100);
+    cursor: pointer;
+    background-image: url(../../media/brand/menu-open.svg);
+    background-repeat: no-repeat;
+    background-size: var(--mobile-icon-size);
+    background-position: center;
+
+    /* Swapping the icon to be compatible with the dark theme */
+    @media (prefers-color-scheme: dark) {
+      background-image: url(../../media/brand/menu-open-light.svg);
+    }
   }
 
-/* Showing the navigation when the box is checked  */
-.site-header__nav-toggle:checked ~ .site-header__nav {
-  display: flex;
-}
+  /* Showing the navigation when the box is checked  */
+  .site-header__nav-toggle:checked ~ .site-header__nav {
+    display: flex;
+  }
 
   /* hiding the nav links */
   .site-header__nav {
@@ -118,11 +145,12 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-   inset: 0;
-   height: 100vh;
-   background-color: hsl(from var(--primary-hsl) h s l / 0.9);
+    inset: 0;
+    height: 100vh;
+    background-color: hsl(from var(--primary-hsl) h s l / 0.9);
     padding: var(--section-padding-md);
     text-align: center;
+
   }
 
   .site-header__links {
@@ -140,14 +168,13 @@
     margin: 0;
     border-radius: 0;
     font-weight: var(--fw-400);
-
-  } 
+  }
 
   .site-header__nav-toggle:checked ~ .site-header__nav-toggle-label {
     z-index: 3;
     background-image: url(../../media/brand/menu-close.svg);
   }
-  
+
   .site-header__brand {
     width: 80%;
   }

@@ -29,7 +29,7 @@
     gap: var(--gap-sm);
 
     > * {
-        width: 50%;
+        width: 45%;
     }
 
     @media (width < 768px) {
@@ -40,10 +40,12 @@
 } /* end of in-line media query */
 }
 
-.contact-form__input {
+.contact-form__input:not(.contact-form__feild-row > *) {
 width: 200%;
-
 @media (width < 768px) {
     width: 150%;
 }
+/* end in line query  */
 }
+
+

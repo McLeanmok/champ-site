@@ -50,6 +50,12 @@
   background-color: transparent;
   border: 3px solid var(--site-color);
   color: var(--black);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent;
+    border: 3px solid var(--white);
+    color: var(--white);
+  }
 }
 
 .standard-btn[data-btn-theme="outline"]:hover, .standard-btn[data-btn-theme="outline"]:focus {
@@ -132,4 +138,39 @@
 
 .contact-form__input:focus-visible {
   border: var(--site-focus-style);
+}
+
+
+/* making components compatible with dark mode */
+@media (prefers-color-scheme: dark) {
+  /* Cards */
+  .primary-card, .icon-card, .step-card {
+    background-color: var(--surface-200);
+  }
+  .primary-card__body, .icon-card__body, .step-card__body {
+    color: var(--white);
+  }
+  .primary-card__title, .icon-card__title, .step-card__title {
+    color: var(--white);
+  }
+
+  /* Primary button  */
+  .standard-btn {
+    background-color: var(--primary-800);
+    color: var(--black);
+  }
+  .standard-btn:hover, .standard-btn:focus {
+    background-color: var(--primary-900);
+    border-radius: var(--radius-lg);
+  }
+
+  /* Form inputs */
+  .contact-form__input {
+    background-color: var(--surface-200);
+    color: var(--white);
+  }
+  /* icon chip  */
+  .icon-card__icon {
+    background-color: var(--seccondary-400);
+  }
 }

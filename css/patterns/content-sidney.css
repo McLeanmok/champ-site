@@ -14,6 +14,11 @@
 /* building in a secondary theme */
 .content-section-sidney[data-sidney-theme="seccondary"] {
     background-color: var(--surface-800);
+
+    /* Making said theme compatible with dark mode */
+    @media (prefers-color-scheme: dark) {
+        background-color: hsl(var(--surface-hue) var(--surface-saturation) 6%);
+    }
 }
 .content-section-sidney__text {
     display: grid;

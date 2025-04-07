@@ -42,3 +42,11 @@
         p {margin: 0;}
     }
 }
+
+
+/* making sure it's compatible with dark mode */
+@media (prefers-color-scheme: dark) {
+    .content-section-hornby {
+      background-color: var(--tertiary-200);
+    }
+  }
