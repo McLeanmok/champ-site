@@ -27,6 +27,18 @@
     justify-self: center;
 }
 
+/* CTA row styling */
+.hero-powell__cta-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap-md);
+    justify-content: center;
+    text-align: center;
+
+    > * {
+        align-self: flex;
+    }
+}
 /* Mobile styling content  */
 @media (max-width: 768px) {
     .hero-powell > .container > .standard-btn {

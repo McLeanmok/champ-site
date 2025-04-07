@@ -52,6 +52,9 @@
 }
 /* Reseting this behavior on mobile devices  */
 @media (max-width: 768px) {
+  .content-section-texada__title {
+    text-align: left;
+  }
   .content-section-texada__item:nth-child(even)
     > .content-section-texada__item-media {
     order: 1;

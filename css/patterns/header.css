@@ -19,12 +19,11 @@
   background-color: var(--white);
   padding-block: var(--section-padding-xs);
   position: sticky;
-  position: relative;
   top: 0;
 
   /* Making the background compatible with dark mode */
   @media (prefers-color-scheme: dark) {
-    background-color: var(--surface-100);
+    background-color: var(--black);
   }
 }
 
