@@ -149,6 +149,7 @@
     background-color: hsl(from var(--primary-hsl) h s l / 0.9);
     padding: var(--section-padding-md);
     text-align: center;
+   
 
   }
 
