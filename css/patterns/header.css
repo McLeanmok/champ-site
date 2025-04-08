@@ -68,7 +68,7 @@
       display: none;
     }
   }
-  
+
   @media (prefers-color-scheme: light) {
     [media="(prefers-color-scheme: dark)"] {
       display: none;
@@ -135,12 +135,12 @@
   /* Showing the navigation when the box is checked  */
   .site-header__nav-toggle:checked ~ .site-header__nav {
     display: flex;
+    transform: translateY(0vw);
   }
 
   /* hiding the nav links */
   .site-header__nav {
-    display: none;
-
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
@@ -149,13 +149,14 @@
     background-color: hsl(from var(--primary-hsl) h s l / 0.9);
     padding: var(--section-padding-md);
     text-align: center;
-   
-
+    transform: translateY(-200vw);
+    transition: 0.5s;
   }
 
   .site-header__links {
     place-self: center;
     margin: 0;
+    padding: 0;
     flex-direction: column;
     gap: calc(var(--gap-md) / 2);
   }
