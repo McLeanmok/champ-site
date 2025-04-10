@@ -6,7 +6,7 @@
 */
 
 .start {
-    background-color: var(--seccondary-700);
+    background-color: var(--seccondary-700, --dark-start-bg-color);
 
     /* making it compatible with the dark theme */
     @media (prefers-color-scheme: dark) {

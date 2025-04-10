@@ -21,7 +21,7 @@
 
 /* Buttons */
 .standard-btn {
-  background-color: var(--site-color);
+  background-color: var(--site-color, --dark-standard-btn-color);
   color: var(--white);
   padding: var(--button-padding);
 
@@ -32,7 +32,7 @@
 }
 
 .standard-btn:hover, .standard-btn:focus {
-  background-color: var(--site-hover-color);
+  background-color: var(--site-hover-color, --dark-standard-btn-hover-color);;
   border-radius: var(--radius-lg);
 }
 
@@ -47,9 +47,12 @@
 } 
 
 .standard-btn[data-btn-theme="outline"] {
+  --outline-color: var(--site-color);
+  --text-color: var(--black);
+
   background-color: transparent;
-  border: 3px solid var(--site-color);
-  color: var(--black);
+  border: 3px solid var(--outline-color, --dark-outline-btn-outline-color);
+  color: var(--black, --dark-outline-btn-color);
 
   @media (prefers-color-scheme: dark) {
     background-color: transparent;
@@ -63,7 +66,7 @@
 }
 /* Cards */
 .primary-card {
-  background-color: var(--primary-card__bg);
+  background-color: var(--primary-card__bg, --dark-primary-card__bg);
   padding: var(--primary-card__padding);
   display: flex;
   flex-direction: column;
@@ -84,7 +87,7 @@
 /* Icon card  */
 .icon-card {
 
-  background-color: var(--primary-card__bg);
+  background-color: var(--primary-card__bg, --dark-primary-card__bg);
   padding: var(--primary-card__padding);
   display: flex;
   flex-direction: column;
@@ -94,7 +97,7 @@
 }
 .icon-card__icon {
   order: -1;
-  background-color: var(--chip__bg);
+  background-color: var(--chip__bg, --dark-chip-bg);
   padding: var(--chip__padding);
   border-radius: var(--chip__radius);
   place-self: flex-start;
@@ -111,7 +114,7 @@
 
 /* Step card */
 .step-card {
-  background-color: var(--primary-card__bg);
+  background-color: var(--primary-card__bg, --dark-primary-card__bg);
   padding: var(--primary-card__padding);
   display: flex;
   flex-direction: column;
@@ -130,7 +133,8 @@
 
 /* Form elements  */
 .contact-form__input {
-  background-color: var(--primary-900);
+  background-color: var(--primary-900, --dark-input-bg-color);
+  color: var(--black, --dark-form-bg-color);
   padding: var(--sp-100) var(--sp-150);
   border: 0;
   border-radius: var(--radius-md);
@@ -140,6 +144,67 @@
   border: var(--site-focus-style);
 }
 
+/* Theme toggle  */
+
+.site-theme-toggle {
+  position: fixed;
+    z-index: 2;
+
+  top: 50em;
+  right: 5em;
+  bottom: 6em;
+  inset: 50 0 5 8;
+}
+
+.theme-switcher {
+  margin-bottom: 2rem;
+  background-color: var(--theme-switch__bg);
+  border-radius: var(--theme-switch__radius);
+  background-image: url(../media/icons/sun.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--theme-switch__icon-size);
+  padding: var(--theme-switch__padding);
+  z-index: -1;
+}
+#theme:checked ~ .theme-switcher {
+  background-color: var(--theme-switch__bg);
+  background-image: url(../media/icons/moon.svg);
+  border-radius: var(--theme-switch__radius);
+}
+
+#theme {
+  z-index: 2;
+}
+
+body:has(input:checked) {
+  @media (prefers-color-scheme: light) {
+    /* all I'm doing is hijacking various elements on the site through my "hook" system that I set up  */
+
+    /* Reset elements  */
+    --dark-mode-text-color: var(--white);
+    --dark-mode-background-color: var(--black);
+    --dark-primary-card__bg: var(--surface-100);
+    --dark-highlight-bg-color: var(--white);
+    --dark-highlight-text-color: var(--black);
+    --dark-scrollbar-bg-color: var(--white);
+    --dark-scrollbar-bg-color: var(--white );
+    --dark-scrollbar-progress-color: var(--site-color);
+
+     /* Component stuff */
+    --dark-standard-btn-color: var(--primary-800);
+    --dark-standard-btn-hover-color: hsl(from var(--primary-hsl) h s l / .2);;
+    --dark-chip-bg: var(--seccondary-400);
+
+    /* Patterns & global templates */
+    --dark-site-header-background-color: var(--black);
+    --dark-site-header-link-color: var(--white);
+    --dark-site-header-rollover-color: var(--primary-800);
+    --dark-texada-seccondary-theme-bg-color: var(--surface-200);
+
+    
+  }
+}
 
 /* making components compatible with dark mode */
 @media (prefers-color-scheme: dark) {

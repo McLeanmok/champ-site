@@ -280,6 +280,12 @@
   --chip__bg: var(--seccondary-200);
   --chip__padding: var(--sp-100);
   --chip__radius: var(--radius-circle);
+
+  /* Theme swicher  */
+  --theme-switch__bg: var(--primary-300);
+  --theme-switch__radius: calc(var(--radius-lg) - 1.3rem);
+  --theme-switch__icon-size: 60%;
+  --theme-switch__padding: var(--sp-200);
 }
 
 /* Classes -- not every prop will get its own utility class. We only offer classes that would benefit you in building sites faster with best practices in mind */

@@ -43,7 +43,7 @@
 
 /* Building in a second theme */
 .content-section-texada[data-texada-theme="seccondary"] {
-  background-color: var(--surface-900);
+  background-color: var(--surface-900, --dark-texada-seccondary-theme-bg-color);
 
   /* making this theme compatible with dark mode */
   @media (prefers-color-scheme: dark) {

@@ -14,7 +14,7 @@
 
 /* Overarching section styles  */
 .content-section-hornby {
-    background-color: var(--tertiary-900);
+    background-color: var(--tertiary-900, --dark-hornby-theme);
 }
 .content-section-hornby >.container {
     display: grid;

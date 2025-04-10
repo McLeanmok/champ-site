@@ -16,7 +16,7 @@
 }
 /* Overarching header styles  */
 .site-header {
-  background-color: var(--white);
+  background-color: var(--white, --dark-header-background-color);
   padding-block: var(--section-padding-xs);
   position: sticky;
   top: 0;
@@ -54,7 +54,7 @@
   transition: 0.3s ease-in-out;
   padding: var(--navlink-click-area); /* experimental */
 
-  color: var(--black);
+  color: var(--black, --dark-site-header-link-color);
 
   @media (prefers-color-scheme: dark) {
     color: var(--white);
@@ -86,7 +86,7 @@
 /* Rollover effects - selecting all my "nav" links except the cta */
 :where(.site-header__link a:hover) :not(.site-header__link:last-child) {
   rotate: 2deg;
-  color: var(--site-hover-color);
+  color: var(--site-hover-color, --dark-site-header-rollover-color);
 }
 
 .site-header__links > .site-header__link:last-child a {

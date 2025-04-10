@@ -20,8 +20,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--text-color);
-  background-color: var(--body-color);
+  color: var(var(--text-color), var(--dark-mode-text-color));
+  background-color: var(var(--body-color), var(--dark-mode-background-color));
+  position: relative;
 }
 /* Removing Bottom Margins from elements */
 h1,
@@ -169,20 +170,19 @@ fieldset {
 
 /* Custom selection color  */
 ::selection {
-  background-color: var(--site-color);
-  color: var(--white);
+  background-color: var(--site-color, --dark-highlight-bg-color);
+  color: var(--white, --dark-highlight-text-color);
 }
 
 /* Custom scrollbar  */
 ::-webkit-scrollbar {
   width: 0.8em;
   height: 0.5em;
-  background-color: var(--site-color);
+  background-color: var(--site-color, --dark-scrollbar-bg-color);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--white);
+  background-color: var(--white, --dark-scrollbar-progress-bg-color);
   border-radius: var(--radius-sm);
-  border: 0.1em solid var(--site-color);
 }
 
 /* Dark Theme */
