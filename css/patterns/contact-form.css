@@ -47,5 +47,9 @@ width: 200%;
 }
 /* end in line query  */
 }
-
+@media (width < 768px) {
+    .contact-form__input {
+        max-width: 125%;
+    }
+}
 
