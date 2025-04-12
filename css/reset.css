@@ -18,12 +18,15 @@ html {
 
 /* Body Tag Defaults */
 body {
+
   margin: 0;
   padding: 0;
-  color: var(var(--text-color), var(--dark-mode-text-color));
-  background-color: var(var(--body-color), var(--dark-mode-background-color));
+  color: var(--black);
+  background-color: var(--white);
   position: relative;
 }
+
+
 /* Removing Bottom Margins from elements */
 h1,
 h2,
