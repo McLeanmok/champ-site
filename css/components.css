@@ -145,68 +145,6 @@
 }
 
  
-/* Theme switcher  */
-#theme {
-  display: none;
-}
-#theme + .theme-switcher {
-  position: fixed;
-    z-index: 2;
-
-  top: 50em;
-  right: 5em;
-  bottom: 6em;
-  inset: 50 0 5 8;
-}
-
-.theme-switcher {
-  margin-bottom: 2rem;
-  background-color: var(--theme-switch__bg);
-  border-radius: var(--theme-switch__radius);
-  background-image: url(../media/icons/sun.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: var(--theme-switch__icon-size);
-  padding: var(--theme-switch__padding);
-  z-index: -1;
-}
-#theme:checked ~ .theme-switcher {
-  background-color: var(--theme-switch__bg);
-  background-image: url(../media/icons/moon.svg);
-  border-radius: var(--theme-switch__radius);
-}
-
-#theme {
-  z-index: 2;
-}
-
-body:has(input:checked) {
-
-    /* all I'm doing is hijacking various elements on the site through my "hook" system that I set up  */
-
-    /* Reset elements  */
-    --dark-mode-text-color: var(--white);
-    --dark-mode-background-color: var(--black);
-    --dark-primary-card__bg: var(--surface-100);
-    --dark-highlight-bg-color: var(--white);
-    --dark-highlight-text-color: var(--black);
-    --dark-scrollbar-bg-color: var(--white);
-    --dark-scrollbar-bg-color: var(--white );
-    --dark-scrollbar-progress-color: var(--site-color);
-
-     /* Component stuff */
-    --dark-standard-btn-color: var(--primary-800);
-    --dark-standard-btn-hover-color: hsl(from var(--primary-hsl) h s l / .2);;
-    --dark-chip-bg: var(--seccondary-400);
-
-    /* Patterns & global templates */
-    --dark-site-header-background-color: var(--black);
-    --dark-site-header-link-color: var(--white);
-    --dark-site-header-rollover-color: var(--primary-800);
-    --dark-texada-seccondary-theme-bg-color: var(--surface-200);
-
-    
-}
 
 /* making components compatible with dark mode */
 @media (prefers-color-scheme: dark) {
